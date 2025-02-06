@@ -1,18 +1,52 @@
 <script>
-var produto = prompt('Digite um nome de produto:');
-var quantidade = parseInt(prompt("Digite uma quantidade que deseja:"))
-var precoUnitario = prompt("Digite o valor Unitário:");
+    var entrada = prompt('Digite um nome de produto: ');
+    var entradaUnidade = parseInt(prompt('Digite quantidade produto: '));
 
-var carrinhoArray = [produto, quantidade, precoUnitario]
+    //var quantidade = parseInt(prompt("Digite uma quantidade que deseja:"))
+    //var precoUnitario = prompt("Digite o valor Unitário:");
 
-var produto = {produto}
-var quantidade = {quantidade}
-var precoUnitario = {precoUnitario}
+    var sabonete = { descricao: 'sabonete lux', valor: 2, unidade: 1 }
+    var fralda = { descricao: 'Fralda lux', valor: 50, unidade: 1 }
+    var sorvete = { descricao: 'Sorvete Napolitano 3 LT', valor: 35, unidade: 1 }
 
-if (carrinhoArray) {
-    quantidade * precoUnitario + (precoUnitario)
-}
+    //var quantidade = {quantidade}
+    //var precoUnitario = {precoUnitario}
 
-alert()
+    var carrinhoArray = [sabonete, fralda, sorvete]
+
+    if (entrada == 'sabonete') {
+
+        var calc = entradaUnidade * sabonete.valor
+
+        if (calc >= 200) {
+            document.write(sabonete.descricao + " " + " <br> Valor com desconto R$ " + (calc - (calc * 0.10)))
+
+        }
+        else
+            document.write(sabonete.descricao + " " + sabonete.valor + " <br> R$ " + calc)
+
+    } else if (entrada == 'fralda') {
+
+        var calc = entradaUnidade * fralda.valor
+
+        if (calc >= 200) {
+            document.write(fralda.descricao + " " + " <br> Valor com desconto R$ " + (calc - (calc * 0.10)))
+
+        }
+        else
+            document.write(fralda.descricao + " " + fralda.valor + " <br> R$ " + calc)
+
+    } else if (entrada == 'sorvete') {
+
+        var calc = entradaUnidade * sorvete.valor
+
+        if (calc >= 200) {
+            document.write(sorvete.descricao + " " + " <br> Valor com desconto R$ " + (calc - (calc * 0.10)))
+
+        }
+        else
+            document.write(sorveteda.descricao + " " + sorvete.valor + " <br> R$ " + calc)
+
+    }
 
 </script>
